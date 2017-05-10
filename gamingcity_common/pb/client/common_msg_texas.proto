@@ -1,0 +1,111 @@
+
+ 
+common_msg_texas.proto"∂
+UserInfo
+guid (Rguid
+chair (Rchair
+name (	Rname
+money (Rmoney
+	bet_money (RbetMoney
+action (Raction
+position (Rposition
+
+hole_cards (R	holeCards
+	countdown	 (R	countdown
+cards
+ (Rcards
+
+cards_type (R	cardsType
+tax (Rtax
+victory (Rvictory
+	win_money (RwinMoney$
+main_pot_money (RmainPotMoney$
+side_pot_money (RsidePotMoney"ê
+
+TexasTable
+state (Rstate
+max_bet (RmaxBet
+min_bet (RminBet
+	blind_bet (RblindBet
+pot (Rpot
+side_pot (RsidePot
+
+think_time (R	thinkTime!
+public_cards (RpublicCards
+	own_chair	 (RownChair"
+MsgID
+IDã§"g
+SC_TexasTableInfo!
+table (2.TexasTableRtable
+user (2	.UserInfoRuser"
+MsgID
+IDêN"z
+SC_TexasSendPublicCards.
+public_cards (2.TexasTableRpublicCards
+user (2	.UserInfoRuser"
+MsgID
+IDëN"S
+SC_TexasSendUserCards(
+
+user_cards (2	.UserInfoR	userCards"
+MsgID
+IDíN"æ
+SC_TexasUserAction(
+
+usr_action (2	.UserInfoR	usrAction!
+table (2.TexasTableRtable
+chair (Rchair
+action (Raction
+	bet_money (RbetMoney"
+MsgID
+IDìN"G
+SC_TexasNewUser"
+user_in (2	.UserInfoRuserIn"
+MsgID
+IDîN"K
+SC_TexasUserLeave$
+user_out (2	.UserInfoRuserOut"
+MsgID
+IDïN"C
+SC_TexasTableEnd
+user (2	.UserInfoRuser"
+MsgID
+IDñN"[
+CS_TexasUserAction
+action (Raction
+	bet_money (RbetMoney"
+MsgID
+IDóN*Õ
+TexasCardsType
+CT_HIGH_CARD
+CT_ONE_PAIR
+CT_TWO_PAIRS
+CT_THREE_OF_A_KIND
+CT_STRAIGHT
+CT_FLUSH
+CT_FULL_HOUSE
+CT_FOUR_OF_KIND
+CT_STRAIT_FLUSH	
+CT_ROYAL_FLUSH
+*g
+TexasAction
+ACT_CALL
+	ACT_RAISE
+	ACT_CHECK
+ACT_FOLD
+
+ACT_ALL_IN
+
+ACT_NOMARL*Ö
+TexasStatus
+STATUS_BETTING_ROUND
+STATUS_PRE_FLOP
+STATUS_FLOP
+STATUS_TURN
+STATUS_RIVER
+STATE_SHOW_DOWN*p
+TexasUserPosition
+POSITION_LITTLE_BLIND
+POSITION_BIG_BLIND
+POSITION_BOTTON
+POSITION_NORMAL

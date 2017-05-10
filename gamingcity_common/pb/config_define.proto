@@ -1,0 +1,93 @@
+syntax = "proto2";
+
+message NetworkAddress {
+	required string ip = 1;
+	required int32 port = 2;
+	optional int32 server_id = 3;
+}
+
+message DBConnectOption {
+	required string host = 1;
+	required string user = 2;
+	required string password = 3;
+	required string database = 4;
+}
+
+message RedisConnectOption {
+	required string ip = 1;
+	required int32 port = 2;
+	optional int32 dbnum = 3;
+	optional string password = 4;
+}
+message RedisSentinelOption {
+	required string ip = 1;
+	required int32 port = 2;
+	optional int32 dbnum = 3;
+	required string master_name = 4;
+	optional string password = 5;
+}
+
+// 配置服务器的配置
+message ConfigServer_Config {
+	required int32 port = 1;
+	required DBConnectOption config_db = 2;
+}
+
+// 通用配置
+message CommonServer_Config {
+	required NetworkAddress config_addr = 1;
+}
+
+// login配置
+message LoginServerConfigInfo {
+	required int32 login_id = 1;
+	required int32 port = 2;
+	repeated NetworkAddress db_addr = 3;
+	optional RedisConnectOption def_redis = 4;
+	repeated RedisSentinelOption def_sentinel = 5;
+}
+
+// 游戏配置
+message GameServerConfigInfo {
+	required int32 game_id = 1;
+	required int32 port = 2;
+	optional int32 using_login_validatebox = 3;
+	optional int32 default_lobby = 4;
+	optional int32 first_game_type = 5;
+	optional int32 second_game_type = 6;
+	optional int32 player_limit = 7;
+	optional string room_list = 8;
+	optional string room_lua_cfg = 9;
+	repeated NetworkAddress login_addr = 10;
+	repeated NetworkAddress db_addr = 11;
+	optional RedisConnectOption def_redis = 12;
+	repeated RedisSentinelOption def_sentinel = 13;
+	optional int32 bank_transfer_tax = 14;
+}
+
+// gate配置
+message GateServerConfigInfo {
+	required int32 gate_id = 1;
+	required int32 port = 2;
+	optional int32 timeout_limit = 3;
+	optional int32 sms_time_limit = 4;
+	optional string sms_url = 5;
+	repeated NetworkAddress login_addr = 6;
+	repeated NetworkAddress game_addr = 7;
+	optional string sms_sign_key = 8;
+}
+
+
+message DBServerConfig {
+	required int32 port = 1;
+	required DBConnectOption login_db = 2;
+	required DBConnectOption game_db = 3;
+	required DBConnectOption log_db = 4;
+	required DBConnectOption recharge_db = 5;
+	optional RedisConnectOption def_redis = 7;
+	repeated RedisSentinelOption def_sentinel = 8;
+	required string cash_money_addr = 9;
+	optional string php_sign_key = 10;
+	optional int32 bank_transfer_tax = 11;
+	optional string php_interface_addr = 12;
+}

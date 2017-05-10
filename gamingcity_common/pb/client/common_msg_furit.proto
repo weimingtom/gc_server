@@ -1,0 +1,77 @@
+
+÷	
+common_msg_furit.proto"T
+CS_FuritBet
+furit (2.FuritRfurit
+money (Rmoney"
+MsgID
+ID∫î"ì
+SC_FuritBet$
+err (2.SC_FuritBet.ErrorRerr
+furit (2.FuritRfurit"
+MsgID
+IDªî"-
+Error
+OK
+	STATE_ERR
+	MONEY_ERR"æ
+SC_FuritState*
+state (2.SC_FuritState.StateRstate
+money (Rmoney
+timer (Rtimer
+furit (Rfurit
+bigsmall (Rbigsmall
+light (Rlight"
+MsgID
+IDªî"z
+State
+FURIT_STATE_BET
+FURIT_STATE_LOTTO
+FURIT_STATE_BS_BET
+FURIT_STATE_BS_LOTTO
+FURIT_STATE_END"%
+CS_FuritBetClean"
+MsgID
+IDƒî"%
+SC_FuritBetClean"
+MsgID
+ID≈î"D
+CS_FuritBetBigSmall
+bigsmall (Rbigsmall"
+MsgID
+ID∆î"C
+CS_FuritBetBigSmallScore
+money (Rmoney"
+MsgID
+ID«î"è
+SC_FuritBetBigSmallScore1
+err (2.SC_FuritBetBigSmallScore.ErrorRerr"
+MsgID
+ID»î"-
+Error
+OK
+	STATE_ERR
+	MONEY_ERR*£
+Furit	
+apple
+
+orange	
+mango
+
+watermelon
+bell
+double_star
+double_seven
+bar	
+lucky	
+small_lucky
+
+small_apple
+small_orange
+small_mango
+small_watermelon
+
+small_bell
+small_double_star
+small_double_seven
+	small_bar

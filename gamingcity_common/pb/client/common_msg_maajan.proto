@@ -1,0 +1,114 @@
+
+ò
+common_msg_maajan.protocommon_player_define.proto"&
+CS_Maajan_Act_Win"
+MsgID
+IDÙ³"=
+CS_Maajan_Act_Double
+tile (Rtile"
+MsgID
+IDÚ³">
+CS_Maajan_Act_Discard
+tile (Rtile"
+MsgID
+IDÛ³"'
+CS_Maajan_Act_Peng"
+MsgID
+IDÜ³";
+CS_Maajan_Act_Gang
+tile (Rtile"
+MsgID
+IDÝ³"'
+CS_Maajan_Act_Pass"
+MsgID
+IDÞ³"<
+CS_Maajan_Act_Chi
+tiles (Rtiles"
+MsgID
+IDß³"*
+CS_Maajan_Act_Trustee"
+MsgID
+IDà³"*
+CS_Maajan_Act_BaoTing"
+MsgID
+IDá³"$
+Maajan_Tiles
+tiles (Rtiles"­
+Maajan_Player_Info-
+pb_ming_pai (2.Maajan_TilesR	pbMingPai
+shou_pai (RshouPai
+hua_pai (RhuaPai
+desk_pai (RdeskPai
+chair_id (RchairId"¯
+SC_Maajan_Desk_Enter2
+
+pb_players (2.Maajan_Player_InfoR	pbPlayers
+state (Rstate
+zhuang (Rzhuang"
+self_chair_id (RselfChairId"
+MsgID
+ID¼´"s
+SC_Maajan_Act_Win
+chair_id (RchairId
+tile (Rtile
+
+ba_gang_hu (RbaGangHu"
+MsgID
+ID½´"D
+SC_Maajan_Act_Double
+chair_id (RchairId"
+MsgID
+ID¾´"Y
+SC_Maajan_Act_Discard
+chair_id (RchairId
+tile (Rtile"
+MsgID
+ID¿´"V
+SC_Maajan_Act_Peng
+chair_id (RchairId
+tile (Rtile"
+MsgID
+IDÀ´"j
+SC_Maajan_Act_Gang
+chair_id (RchairId
+tile (Rtile
+type (Rtype"
+MsgID
+IDÁ´"k
+SC_Maajan_Act_Chi
+chair_id (RchairId
+tile (Rtile
+tiles (Rtiles"
+MsgID
+IDÃ´"E
+SC_Maajan_Tile_Letf
+	tile_left (RtileLeft"
+MsgID
+IDÄ´"G
+SC_Maajan_Discard_Round
+chair_id (RchairId"
+MsgID
+IDÅ´"?
+SC_Maajan_Desk_State
+state (Rstate"
+MsgID
+IDÆ´"9
+SC_Maajan_Draw
+tiles (Rtiles"
+MsgID
+IDÇ´"N
+SC_Maajan_Bu_Hua'
+pb_bu_hu (2.Maajan_TilesRpbBuHu"
+MsgID
+IDÈ´"d
+SC_Maajan_Act_Trustee
+chair_id (RchairId
+
+is_trustee (R	isTrustee"
+MsgID
+IDÉ´"^
+SC_Maajan_Act_BaoTing
+chair_id (RchairId
+is_ting (RisTing"
+MsgID
+IDÊ´

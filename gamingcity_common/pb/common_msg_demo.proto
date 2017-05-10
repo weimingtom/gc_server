@@ -1,0 +1,20 @@
+﻿syntax = "proto2";
+
+// 客户端和服务器通信消息
+// C Client, L LoginServer, D DBServer, S GameServer
+// CS 即C-发送->S
+
+
+//////////////////////////////////////////////////////////////////////////
+/// demo相关消息
+//////////////////////////////////////////////////////////////////////////
+
+message CS_Demo {
+	enum MsgID { ID = 13000; Target = 2; }
+	optional string	test = 1;
+}
+
+message SC_Demo {
+	enum MsgID { ID = 13001; }
+	optional string	test = 1;
+}

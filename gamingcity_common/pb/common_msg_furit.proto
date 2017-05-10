@@ -1,0 +1,113 @@
+﻿syntax = "proto2";
+
+// 客户端和服务器通信消息
+// C Client, L LoginServer, D DBServer, S GameServer
+// CS 即C-发送->S
+
+
+//////////////////////////////////////////////////////////////////////////
+/// 水果机相关消息
+//////////////////////////////////////////////////////////////////////////
+
+//水果类型
+enum Furit
+{
+	apple = 1;
+	orange = 2;
+	mango = 3;
+	watermelon = 4;
+	bell = 5;
+	double_star = 6;
+	double_seven = 7;
+	bar = 8;
+	lucky = 9;
+	small_lucky = 10;
+	small_apple = 11;
+	small_orange = 12;
+	small_mango = 13;
+	small_watermelon = 14;
+	small_bell = 15;
+	small_double_star = 16;
+	small_double_seven = 17;
+	small_bar = 18;
+}
+
+//押注
+message CS_FuritBet
+{
+	enum MsgID { ID = 19002; }
+	optional Furit furit = 1;//水果
+	optional int64 money = 2;//金额
+}
+
+message SC_FuritBet
+{
+	enum MsgID { ID = 19003; }
+	//下注错误代码
+	enum Error
+	{
+		OK = 1;//下注成功
+		STATE_ERR = 2;//阶段错误
+		MONEY_ERR = 3;//钱不够
+	}
+	optional Error err = 1;//错误代码
+	optional Furit furit = 2;//下注类型
+}
+
+//状态更新
+message SC_FuritState
+{
+	enum MsgID { ID = 19003; }
+	enum State
+	{
+		FURIT_STATE_BET 	= 1;//押注
+		FURIT_STATE_LOTTO 	= 2;//水果抽奖
+		FURIT_STATE_BS_BET 	= 3;//押大小开始
+		FURIT_STATE_BS_LOTTO= 4;//押大小结果
+		FURIT_STATE_END 	= 5;//结算
+	}
+	optional State state = 1;//阶段状态
+	optional int64 money = 2;//收益
+	optional int32 timer = 3;//定时器 单位S
+	repeated int32 furit = 4;//开奖结果
+	optional int32 bigsmall = 5;//大小结果
+	optional int32 light = 6;//转灯类型
+}
+
+//清空下注
+message CS_FuritBetClean
+{
+	enum MsgID { ID = 19012; }
+}
+
+message SC_FuritBetClean
+{
+	enum MsgID { ID = 19013; }
+}
+
+//押大小
+message CS_FuritBetBigSmall
+{
+	enum MsgID { ID = 19014; }
+	optional int32 bigsmall = 1;//1 大 2 小
+}
+
+//大小上下分
+message CS_FuritBetBigSmallScore
+{
+	enum MsgID { ID = 19015; }
+	optional int64 money = 1;//上下分
+}
+
+message SC_FuritBetBigSmallScore
+{
+	enum MsgID { ID = 19016; }
+	//错误代码
+	enum Error
+	{
+		OK = 1;//下注成功
+		STATE_ERR = 2;//阶段错误
+		MONEY_ERR = 3;//钱不够
+	}
+	optional Error err = 1;//错误代码
+}

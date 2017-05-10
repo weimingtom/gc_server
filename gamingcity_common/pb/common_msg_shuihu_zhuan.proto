@@ -1,0 +1,132 @@
+﻿syntax = "proto2";
+
+// 客户端和服务器通信消息
+// C Client, L LoginServer, D DBServer, S GameServer
+// CS 即C-发送->S
+
+
+
+//////////////////////////////////////////////////////////////////////////
+/// 类型
+
+// 图标类型
+enum IconType
+{
+    fu_tou = 1;
+    ying_qiang = 2;
+    da_dao = 3;
+    lu_zhi_shen = 4;
+    lin_chong = 5;
+    song_jiang = 6;
+    ti_tian_xing_dao = 7;
+    zhong_yi_tang = 8;
+    shuihu_zhuan = 9;
+    lottery_ticket = 10;
+}
+
+// 连接类型
+enum LinkType
+{
+    link_three = 1;
+    link_four = 2;
+    link_five = 3;
+    link_wuqi = 4;
+    link_renwu = 5;
+    link_fullscreen = 6;
+}
+
+// 连接方向
+enum LinkDirection
+{
+    direction_left = -1;
+    direction_right = 1;
+}
+
+// 骰子类型
+enum DiceType
+{
+    dice_small = -1;
+    dice_tie = 0;
+    dice_big = 1;
+}
+
+// 图案中奖条目
+message PatternLotteryItem
+{
+    optional int32 line = 1;
+    optional int32 icon = 2;
+    optional int32 type = 3;
+    optional int32 direction = 4;
+    optional int32 multiple = 5;
+}
+
+//////////////////////////////////////////////////////////////////////////
+/// 消息
+
+// 转动图案
+message CS_RotatePattern
+{
+    enum MsgID { ID = 14000; Target = 2; }
+    optional int32 bet_score = 1;
+}
+
+// 图案结果
+message SC_PatternResult
+{
+    enum MsgID { ID = 14001; }
+    repeated int32 pattern_data = 1;
+    optional int32 pattern_multiple = 2;
+    optional int32 bonus_times = 3;
+    optional int32 lottery_ticket_count = 4;
+    repeated PatternLotteryItem lottery_items = 5;
+    optional int32 lottery_score = 6;
+}
+
+// 比倍
+message CS_CompareDice
+{
+    enum MsgID { ID = 14002; Target = 2; }
+    optional int32 dice_type = 1;
+}
+
+// 比倍结果
+message SC_DiceResult
+{
+    enum MsgID { ID = 14003; Target = 2; }
+    optional int32 dice_point1 = 1;
+    optional int32 dice_point2 = 2;
+    optional int32 lottery_type = 3;
+    optional int32 lottery_multiple = 4;
+    optional int32 lottery_score = 5;
+}
+
+// 转动派奖
+message CS_RotateBonus
+{
+    enum MsgID { ID = 14004; Target = 2; }
+}
+
+// 派奖结果
+message SC_BonusResult
+{
+    enum MsgID { ID = 14005; Target = 2; }
+    repeated int32 rolling_icons = 1;
+    optional int32 rotate_icon = 2;
+    optional int32 lottery_multiple = 3;
+    optional int32 lottery_score = 4;
+    optional int32 remain_times = 5;
+}
+
+// 收分
+message CS_CollectScore
+{
+    enum MsgID { ID = 14006; Target = 2; }
+}
+
+// 分数变化
+message SC_ScoreChanged
+{
+    enum MsgID { ID = 14007; Target = 2; }
+    optional int32 lottery_score = 1;
+    optional int32 player_score = 2;
+}
