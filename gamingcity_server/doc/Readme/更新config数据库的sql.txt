@@ -1,0 +1,15 @@
+
+1.更新数据库config中表t_db_server_cfg命令[数据库配置]
+UPDATE t_db_server_cfg SET ip='DBServer所在服务器IP',login_db_host='tcp://account数据库所在服务器IP:3306', login_db_password='登录account密码',game_db_host='tcp://game数据库所在服务器IP:3306', game_db_password='登录game数据库密码',log_db_host='tcp://log数据库所在服务器IP:3306', log_db_password='登录log服务器密码', recharge_db_host='tcp://登录recharge数据库IP:3306', recharge_db_password='登录recharge密码',cash_money_addr='提现地址' WHERE id =1;
+
+2.更新数据库config中表t_game_server_cfg命令[游戏配置]
+UPDATE t_game_server_cfg SET ip='游戏服所在服务器IP';
+
+3.更新数据库config中表t_gate_server_cfg命令[网关配置]
+UPDATE t_gate_server_cfg SET ip='网关服IP',sms_url='短信地址'; 
+
+4.更新数据库config中表t_login_server_cfg命令[登录服配置]
+UPDATE t_login_server_cfg SET ip='登录服IP';  
+
+5.更新数据库config中表t_redis_cfg命令[redis配置]
+UPDATE t_redis_cfg SET ip='redis服务器IP',port = 6379,password='登录redis服务器密码';  

@@ -1,0 +1,32 @@
+﻿新框架测试服务器
+-------------------
+119.23.142.36(公)
+10.29.66.28(内)
+administrator
+Z8zZvMdcuVP#bgDN
+
+
+------------------------
+执行  C:\Game\config 下
+AllConfig_s.py 生成本地配置
+
+------------------------
+C:\Game\Debug下启动
+启动服务器.bat
+GmServer.exe
+
+------------------------
+C:\Game\SendSms\SendSms\bin\Debug
+SendSms.exe
+启动 短信服务器
+
+------------------------
+C:\Game\sql
+下有sql，有更新时 只执行更新部分，注意保存数据
+
+服务器上 数据库
+用户名 root
+密码   root
+
+python 路径 ：C:\Python27
+redis  路径 ：C:\Program Files\Redis

@@ -1,0 +1,66 @@
+3rdParty 第三方库
+doc 文档
+SendSms 阿里云短信验证服务器
+
+common 服务器客户端公用目录
+|____ pb protobuf定义文件
+	|____ common_enum_define.proto 服务器和客户端之间的消息定义，以common_开头的是服务器客户端公用的
+	|____ common_msg_fishing.proto 捕鱼相关消息定义
+	|____ common_player_define.proto 玩家需要存档的数据定义
+	|____ common_msg_demo.proto demo消息定义
+	|____ msg_server.proto 服务器之间消息定义
+	|____ verify_define.proto 账号验证需要的数据定义
+	|____ server_pbcreate.bat 对该目录下文件自动生成服务器需要的protobufer的c++和二进制文件，还有客户端消息转发信息
+	|____ reg_gate_dispatch_msg.lua 用于生成客户端发送的消息向哪个服务器转发，仅用于GateServer
+	|____ reg_gate_dispatch_msg.proto 客户端发送的消息向哪个服务器转发数据定义，仅用于GateServer
+
+server 服务器相关
+|____ code 服务器代码
+	|____ BaseGame 游戏服务器公用代码
+	|____ DBServer 数据库服务器
+	|____ GameFishing 捕鱼服务器
+	|____ GameServer 游戏服务器
+	|____ GateServer 客户端连接的服务器
+	|____ LoginServer 登陆服务器
+	|____ lua lua5.3代码
+	|____ ServerCommon 服务器公用代码
+	|____ TestLuaClient 一个测试客户端
+|____ lib c++编译生成的静态库
+|____ project 可执行的服务器
+	|____ config 服务器运营配置文件
+	|____ data 服务器数据，如xml等
+	|____ Debug Debug版可执行程序
+	|____ Release Release版可执行程序
+	|____ log 日志目录
+	|____ pb protobuf二进制文件，云风的pbc-lua用到
+	|____ script 脚本目录
+		|____ data lua格式的配置表
+		|____ db DBServer相关脚本
+		|____ game 游戏服务器相关脚本
+			|____ main.lua 游戏启动，第一个调用的脚本
+			|____ net_func.lua 游戏服务器发送消息的函数
+			|____ register.lua 收到消息的处理函数注册
+			|____ lobby 游戏大厅相关脚本，所有游戏公用
+				|____ android_manager.lua 当前服务器机器人管理器
+				|____ base_character.lua base_player和base_android的基类
+				|____ base_android.lua 游戏中机器人基类
+				|____ base_player.lua 游戏中玩家基类
+				|____ base_room.lua 游戏中房间基类
+				|____ base_room_manager.lua 游戏中房间管理器基类
+				|____ base_table.lua 游戏中桌子基类
+				|____ on_award.lua 领奖消息处理
+				|____ on_bank.lua 银行消息处理
+				|____ on_chat.lua 聊天消息处理
+				|____ on_item.lua 物品消息处理
+				|____ on_login_logout.lua 登陆，退出，切换服务器消息处理
+				|____ on_mail.lua 邮件消息处理
+				|____ on_room.lua 房间操作消息处理
+			|____ fishing 捕鱼相关脚本
+				|____ fishing_room.lua 捕鱼房间操作消息处理
+|____ sql 创建mysql数据库需要的文件
+|____ temp c++编译临时文件
+|____ test lua测试客户端
+	|____ Debug Debug版可执行程序
+	|____ Release Release版可执行程序
+	|____ log 日志目录
+	|____ script 脚本目录

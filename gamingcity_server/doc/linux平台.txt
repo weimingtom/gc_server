@@ -1,0 +1,58 @@
+安装
+CentOS-7-x86_64-DVD-1511.iso
+mysql-5.7.11-1.el7.x86_64.rpm-bundle.tar
+
+编译并第三方安装库
+boost_1_60_0
+mysql-connector-c++-1.1.7
+pbc-cloudwu
+protobuf-3.0.0-beta-2
+redis-3.2.8.tar.gz 这个放到3rdParty目录安装
+
+
+执行gamingcity/linux_cfg.sh 生成pb文件
+
+
+
+==========================================================
+环境搭建
+
+protbuf 安装
+yum install autoconf
+yum install automake
+yum install libtool
+yum install curl
+./autogen.sh
+./configure --prefix=/usr/local/protobuf
+make
+make check
+make install
+
+lua 安装
+yum install readline-devel
+make linux
+make install
+
+mysql 安装
+rpm -ivh mysql-community-common-5.7.11-1.el7.x86_64.rpm mysql-community-libs-5.7.11-1.el7.x86_64.rpm mysql-community-client-5.7.11-1.el7.x86_64.rpm mysql-community-server-5.7.11-1.el7.x86_64.rpm mysql-community-devel-5.7.11-1.el7.x86_64.rpm
+rpm -ivh  mysql-community-embedded-5.7.11-1.el7.x86_64.rpm mysql-community-embedded-compat-5.7.11-1.el7.x86_64.rpm mysql-community-embedded-devel-5.7.11-1.el7.x86_64.rpm
+-- 修改密码
+mysqld --skip-grant-tables --user=root
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD('ABcd@1234')
+
+编译 mysql-connector-c++
+yum install cmake
+3rdParty/mysql-connector-c++-1.1.7]# cmake .
+                                     make clean
+                                     make
+                                     make install
+
+redis安装
+make&& make install
+cd utils/
+./install_server.sh
+
+3rdParty\pbc-cloudwu
+make
+3rdParty\pbc-cloudwu\binding\lua53
+make
