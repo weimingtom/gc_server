@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F9BC8E5D-A5D9-42D9-9AAB-4777CDC9DC76}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ServerCommon</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)..\lib\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\temp\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)..\lib\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\temp\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\3rdParty\boost_1_60_0\;..\..\3rdParty\protobuf-3.0.0-beta-2\src\;..\lua\src\;..\..\3rdParty\pbc-cloudwu\;..\..\3rdParty\pbc-cloudwu\src\;..\..\3rdParty\openssl-1.0.2g\include\;..\..\3rdParty\MySQL Server 5.7\include\;..\..\3rdParty\mysql-connector-c-6.1.6-src\include\;..\..\3rdParty\mysql-connector-c++-1.1.7\;..\..\3rdParty\mysql-connector-c++-1.1.7\driver\;..\..\3rdParty\mysql-connector-c++-1.1.7\build\;..\..\3rdParty\redis-win-3.0.503\deps\hiredis\;cjson;..\pb_server\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>..\..\3rdParty\protobuf-3.0.0-beta-2\bin\$(Configuration)\;..\..\3rdParty\pbc-cloudwu\$(Configuration)\;..\..\3rdParty\openssl-1.0.2g\lib\;..\..\3rdParty\mysql-connector-c-6.1.6-src\build\$(Configuration)\;..\..\3rdParty\mysql-connector-c++-1.1.7\build\$(Configuration)\;..\..\3rdParty\redis-win-3.0.503\msvs\Win32\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libprotobufd.lib;pbc.lib;libmysql.lib;mysqlcppconn.lib;hiredis.lib;Win32_Interop.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\3rdParty\boost_1_60_0\;..\..\3rdParty\protobuf-3.0.0-beta-2\src\;..\lua\src\;..\..\3rdParty\pbc-cloudwu\;..\..\3rdParty\pbc-cloudwu\src\;..\..\3rdParty\openssl-1.0.2g\include\;..\..\3rdParty\MySQL Server 5.7\include\;..\..\3rdParty\mysql-connector-c-6.1.6-src\include\;..\..\3rdParty\mysql-connector-c++-1.1.7\;..\..\3rdParty\mysql-connector-c++-1.1.7\driver\;..\..\3rdParty\mysql-connector-c++-1.1.7\build\;..\..\3rdParty\redis-win-3.0.503\deps\hiredis\;cjson;..\pb_server\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>..\..\3rdParty\protobuf-3.0.0-beta-2\bin\$(Configuration)\;..\..\3rdParty\pbc-cloudwu\$(Configuration)\;..\..\3rdParty\openssl-1.0.2g\lib\;..\..\3rdParty\mysql-connector-c-6.1.6-src\build\$(Configuration)\;..\..\3rdParty\mysql-connector-c++-1.1.7\build\$(Configuration)\;..\..\3rdParty\redis-win-3.0.503\msvs\Win32\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libprotobuf.lib;pbc.lib;libmysql.lib;mysqlcppconn.lib;hiredis.lib;Win32_Interop.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="asynTask\AsynTaskMgr.h" />
+    <ClInclude Include="asynTask\HttpRequest.h" />
+    <ClInclude Include="base64.h" />
+    <ClInclude Include="BaseServer.h" />
+    <ClInclude Include="cjson\fpconv.h" />
+    <ClInclude Include="cjson\lua_cjson.h" />
+    <ClInclude Include="cjson\lua_extensions.h" />
+    <ClInclude Include="cjson\strbuf.h" />
+    <ClInclude Include="CryptoManager.h" />
+    <ClInclude Include="DBConnection.h" />
+    <ClInclude Include="DBConnectionPool.h" />
+    <ClInclude Include="DBQueryResult.h" />
+    <ClInclude Include="FileMD5.h" />
+    <ClInclude Include="GameLog.h" />
+    <ClInclude Include="GmManager.h" />
+    <ClInclude Include="GameContrl.h" />
+    <ClInclude Include="LuaDBConnectionPool.h" />
+    <ClInclude Include="LuaNetworkDispatcher.h" />
+    <ClInclude Include="LuaScriptManager.h" />
+    <ClInclude Include="lua_tinker.h" />
+    <ClInclude Include="lua_tinker_ex.h" />
+    <ClInclude Include="minidump.h" />
+    <ClInclude Include="OpenSSLCryptoManager.h" />
+    <ClInclude Include="platform_windows.h" />
+    <ClInclude Include="RandomHelper.h" />
+    <ClInclude Include="RedisConnection.h" />
+    <ClInclude Include="RedisConnectionThread.h" />
+    <ClInclude Include="RedisQueryResult.h" />
+    <ClInclude Include="RSAEuro\global.h" />
+    <ClInclude Include="RSAEuro\md5.h" />
+    <ClInclude Include="RSAEuro\nn.h" />
+    <ClInclude Include="RSAEuro\prime.h" />
+    <ClInclude Include="RSAEuro\rsa.h" />
+    <ClInclude Include="RSAEuro\rsaeuro.h" />
+    <ClInclude Include="RSAEuro\r_random.h" />
+    <ClInclude Include="GameTimeManager.h" />
+    <ClInclude Include="NetworkConnectSession.h" />
+    <ClInclude Include="NetworkDispatcher.h" />
+    <ClInclude Include="NetworkIoServicePool.h" />
+    <ClInclude Include="NetworkServer.h" />
+    <ClInclude Include="NetworkSession.h" />
+    <ClInclude Include="perinclude.h" />
+    <ClInclude Include="Singleton.h" />
+    <ClInclude Include="UtilsHelper.h" />
+    <ClInclude Include="WindowsConsole.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="asynTask\AsynTaskMgr.cpp" />
+    <ClCompile Include="asynTask\HttpRequest.cpp" />
+    <ClCompile Include="base64.cpp" />
+    <ClCompile Include="BaseServer.cpp" />
+    <ClCompile Include="BindDBConnectionPool.cpp" />
+    <ClCompile Include="BindGameLog.cpp" />
+    <ClCompile Include="BindGameTimer.cpp" />
+    <ClCompile Include="BindRedis.cpp" />
+    <ClCompile Include="cjson\fpconv.c" />
+    <ClCompile Include="cjson\lua_cjson.c" />
+    <ClCompile Include="cjson\lua_extensions.c" />
+    <ClCompile Include="cjson\strbuf.c" />
+    <ClCompile Include="DBConnection.cpp" />
+    <ClCompile Include="DBConnectionPool.cpp" />
+    <ClCompile Include="FileMD5.cpp" />
+    <ClCompile Include="GameLog.cpp" />
+    <ClCompile Include="GmManager.cpp" />
+    <ClCompile Include="GameContrl.cpp" />
+    <ClCompile Include="LuaDBConnectionPool.cpp" />
+    <ClCompile Include="LuaScriptManager.cpp" />
+    <ClCompile Include="lua_tinker.cpp" />
+    <ClCompile Include="lua_tinker_ex.cpp" />
+    <ClCompile Include="OpenSSLCryptoManager.cpp" />
+    <ClCompile Include="pbc-lua53.cpp" />
+    <ClCompile Include="platform_windows.cpp" />
+    <ClCompile Include="RedisConnection.cpp" />
+    <ClCompile Include="RedisConnectionThread.cpp" />
+    <ClCompile Include="RSAEuro\md5c.cpp" />
+    <ClCompile Include="RSAEuro\nn.cpp" />
+    <ClCompile Include="RSAEuro\prime.cpp" />
+    <ClCompile Include="RSAEuro\rsa.cpp" />
+    <ClCompile Include="RSAEuro\r_keygen.cpp" />
+    <ClCompile Include="RSAEuro\r_random.cpp" />
+    <ClCompile Include="RSAEuro\r_stdlib.cpp" />
+    <ClCompile Include="GameTimeManager.cpp" />
+    <ClCompile Include="NetworkConnectSession.cpp" />
+    <ClCompile Include="NetworkDispatcher.cpp" />
+    <ClCompile Include="NetworkIoServicePool.cpp" />
+    <ClCompile Include="NetworkServer.cpp" />
+    <ClCompile Include="NetworkSession.cpp" />
+    <ClCompile Include="UtilsHelper.cpp" />
+    <ClCompile Include="WindowsConsole.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\lua\lua.vcxproj">
+      <Project>{fbab75c5-86d5-4a05-b981-2473f1f511aa}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\pb_server\pb_server.vcxproj">
+      <Project>{efe31f5d-56ab-4a27-bba6-a2ab4296fc09}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

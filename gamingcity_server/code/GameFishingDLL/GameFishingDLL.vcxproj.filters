@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{df648687-b138-4529-a766-ebaf8037e175}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Common\BezierCurve.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Buffer.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\BufferFactory.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\BufferManager.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Bullet.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\CommonLogic.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Effect.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\EffectFactory.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\EffectManager.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\EventMgr.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Fish.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\GameConfig.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\IDGenerator.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\MathAide.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\MoveCompent.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\MovePoint.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\MyComponent.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\MyComponentFactory.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\MyObject.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\MyObjectFactory.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\MyObjectManager.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\PathManager.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Player.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\pugixml.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\VisualCompent.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonFun.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Server.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TableFrameSink.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TableManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ServerCommon\GameTimeManager.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\pb_server\config_define.pb.cc">
+      <Filter>Common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common\BezierCurve.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Buffer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\BufferFactory.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\BufferManager.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Bullet.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\CallBack.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\CommonLogic.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Effect.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\EffectFactory.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\EffectManager.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Event.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\EventMgr.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Factory.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Fish.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\GameConfig.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\IDGenerator.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\MathAide.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\MoveCompent.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\MovePoint.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\MyComponent.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\MyComponentFactory.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\MyFunctor.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\MyObject.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\MyObjectFactory.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\MyObjectManager.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\PathManager.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Player.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Point.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\pugiconfig.hpp">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\pugixml.hpp">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Size.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\TSingleton.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\VisualCompent.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\XMLDecrypt.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonFun.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TableFrameSink.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TableManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerCommon\GameLog.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerCommon\GameTimeManager.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\pb_server\config_define.pb.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

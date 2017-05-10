@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{59CBB03E-F9F8-4C31-856A-FCC6932D3559}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>GmServer</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)..\project\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\temp\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)..\project\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\temp\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\3rdParty\libevent-2.0.22-stable\;..\..\3rdParty\libevent-2.0.22-stable\include\;..\..\3rdParty\protobuf-3.0.0-beta-2\src\;..\..\3rdParty\rapidjson-1.1.0\include\;..\pb_server\;..\ServerCommon\;..\..\3rdParty\boost_1_60_0\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\3rdParty\libevent-2.0.22-stable\;..\..\3rdParty\protobuf-3.0.0-beta-2\bin\$(Configuration)\;..\..\3rdParty\boost_1_60_0\stage\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libevent.lib;ws2_32.lib;libprotobufd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\3rdParty\boost_1_60_0\;..\..\3rdParty\libevent-2.0.22-stable\;..\..\3rdParty\libevent-2.0.22-stable\include\;..\..\3rdParty\protobuf-3.0.0-beta-2\src\;..\..\3rdParty\rapidjson-1.1.0\include\;..\pb_server\;..\ServerCommon\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\3rdParty\libevent-2.0.22-stable\;..\..\3rdParty\protobuf-3.0.0-beta-2\bin\$(Configuration)\;..\..\3rdParty\boost_1_60_0\stage\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libevent.lib;ws2_32.lib;libprotobuf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\pb_server\common_enum_define.pb.h" />
+    <ClInclude Include="..\pb_server\common_player_define.pb.h" />
+    <ClInclude Include="..\pb_server\config_define.pb.h" />
+    <ClInclude Include="..\pb_server\msg_server.pb.h" />
+    <ClInclude Include="..\pb_server\redis_define.pb.h" />
+    <ClInclude Include="..\pb_server\verify_define.pb.h" />
+    <ClInclude Include="ClientSocket.h" />
+    <ClInclude Include="GmConfig.h" />
+    <ClInclude Include="PbClientSocket.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="WebRequestDispatch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\pb_server\common_enum_define.pb.cc" />
+    <ClCompile Include="..\pb_server\common_player_define.pb.cc" />
+    <ClCompile Include="..\pb_server\config_define.pb.cc" />
+    <ClCompile Include="..\pb_server\msg_server.pb.cc" />
+    <ClCompile Include="..\pb_server\redis_define.pb.cc" />
+    <ClCompile Include="..\pb_server\verify_define.pb.cc" />
+    <ClCompile Include="ClientSocket.cpp" />
+    <ClCompile Include="GmConfig.cpp" />
+    <ClCompile Include="GmServer.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="WebRequestDispatch.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ServerCommon\ServerCommon.vcxproj">
+      <Project>{f9bc8e5d-a5d9-42d9-9aab-4777cdc9dc76}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

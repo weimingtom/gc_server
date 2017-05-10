@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="cfg" displayName="cfg" projectFiles="true">
+      <itemPath>cfg/DBServerConfig.pb.cc</itemPath>
+      <itemPath>cfg/DBServerConfig.pb.h</itemPath>
+      <itemPath>cfg/DBServerConfig.proto</itemPath>
+    </logicalFolder>
+    <logicalFolder name="HeaderFiles" displayName="头文件" projectFiles="true">
+      <itemPath>DBLuaScriptManager.h</itemPath>
+      <itemPath>DBManager.h</itemPath>
+      <itemPath>DBServer.h</itemPath>
+      <itemPath>DBServerConfigManager.h</itemPath>
+      <itemPath>DBSession.h</itemPath>
+      <itemPath>DBSessionManager.h</itemPath>
+      <itemPath>stdafx.h</itemPath>
+      <itemPath>targetver.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles" displayName="源文件" projectFiles="true">
+      <itemPath>BindDBManager.cpp</itemPath>
+      <itemPath>BindDBNetManager.cpp</itemPath>
+      <itemPath>DBLuaScriptManager.cpp</itemPath>
+      <itemPath>DBManager.cpp</itemPath>
+      <itemPath>DBServer.cpp</itemPath>
+      <itemPath>DBServerConfigManager.cpp</itemPath>
+      <itemPath>DBSession.cpp</itemPath>
+      <itemPath>DBSessionManager.cpp</itemPath>
+      <itemPath>stdafx.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles" displayName="资源文件" projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="测试文件"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="重要文件"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>cfg</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <standard>8</standard>
+          <incDir>
+            <pElem>/root/redis/deps/hiredis</pElem>
+            <pElem>../../../3rdParty/pbc-cloudwu</pElem>
+            <pElem>../../../3rdParty/pbc-cloudwu/src</pElem>
+            <pElem>../../../3rdParty/rapidjson-1.1.0/include</pElem>
+            <pElem>../../../common/pb</pElem>
+            <pElem>../ServerCommon</pElem>
+            <pElem>cfg</pElem>
+            <pElem>/usr/include/mysql</pElem>
+          </incDir>
+          <commandLine>-I/usr/local/protobuf/include/</commandLine>
+          <preprocessorList>
+            <Elem>PLATFORM_LINUX</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <output>${CND_DISTDIR}/../../../project/Debug/dbserver</output>
+          <linkerAddLib>
+            <pElem>/root/redis/deps/hiredis/</pElem>
+            <pElem>/usr/lib64</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../../common/pb"
+                            CT="3"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../../../common/pb"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/../../../server/lib/libpb.a">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../ServerCommon"
+                            CT="3"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../ServerCommon"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/../../../lib/libservercommon.a">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibFileItem>/usr/local/lib/libboost_system.a</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/libboost_thread.a</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/liblua.a</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/libprotobuf.a</linkerLibFileItem>
+            <linkerLibFileItem>/lib64/mysql/libmysqlclient.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib64/libmysqlcppconn.so</linkerLibFileItem>
+            <linkerLibFileItem>../../../3rdParty/pbc-cloudwu/build/libpbc.a</linkerLibFileItem>
+          </linkerLibItems>
+          <commandLine>-lhiredis -ldl</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="BindDBManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BindDBNetManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DBLuaScriptManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DBLuaScriptManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DBManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DBManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DBServer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DBServer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DBServerConfigManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DBServerConfigManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DBSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DBSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DBSessionManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DBSessionManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cfg/DBServerConfig.pb.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cfg/DBServerConfig.pb.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cfg/DBServerConfig.proto" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="stdafx.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="stdafx.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="targetver.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="BindDBManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BindDBNetManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DBLuaScriptManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DBLuaScriptManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DBManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DBManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DBServer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DBServer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DBServerConfigManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DBServerConfigManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DBSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DBSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DBSessionManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DBSessionManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cfg/DBServerConfig.pb.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cfg/DBServerConfig.pb.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cfg/DBServerConfig.proto" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="stdafx.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="stdafx.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="targetver.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

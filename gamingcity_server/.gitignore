@@ -1,0 +1,16 @@
+/temp
+/lib
+/project/log
+/project/pb
+/perf/log
+*.sdf
+*.opensdf
+*.suo
+*.exe
+*.dll
+*.exp
+*.ilk
+*.lib
+*.pdb
+*.pb.h
+*.pb.cc

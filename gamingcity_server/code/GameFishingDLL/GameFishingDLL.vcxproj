@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5DB0D37D-8534-49D1-B6E5-7017420F07FE}</ProjectGuid>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>GameFishingDLL</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CLRSupport>false</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CLRSupport>false</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)..\project\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\temp\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)..\project\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\temp\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\3rdParty\boost_1_60_0\;..\..\3rdParty\protobuf-3.0.0-beta-2\src\;..\..\3rdParty\redis-win-3.0.503\deps\hiredis\;..\..\3rdParty\websocketpp\;..\lua\src\;..\pb_server\;..\ServerCommon\;..\BaseGame\;..\BaseGame\cfg\;.;Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>lua.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\3rdParty\protobuf-3.0.0-beta-2\bin\Debug\;..\..\3rdParty\boost_1_60_0\stage\lib\;..\..\lib\Debug\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\3rdParty\boost_1_60_0\;..\..\3rdParty\protobuf-3.0.0-beta-2\src\;..\..\3rdParty\redis-win-3.0.503\deps\hiredis\;..\..\3rdParty\websocketpp\;..\lua\src\;..\pb_server\;..\ServerCommon\;..\BaseGame\;..\BaseGame\cfg\;.;Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>lua.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\3rdParty\protobuf-3.0.0-beta-2\bin\Debug\;..\..\3rdParty\boost_1_60_0\stage\lib\;..\..\lib\Debug\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\pb_server\config_define.pb.cc" />
+    <ClCompile Include="..\ServerCommon\GameTimeManager.cpp" />
+    <ClCompile Include="CommonFun.cpp" />
+    <ClCompile Include="Common\BezierCurve.cpp" />
+    <ClCompile Include="Common\Buffer.cpp" />
+    <ClCompile Include="Common\BufferFactory.cpp" />
+    <ClCompile Include="Common\BufferManager.cpp" />
+    <ClCompile Include="Common\Bullet.cpp" />
+    <ClCompile Include="Common\CommonLogic.cpp" />
+    <ClCompile Include="Common\Effect.cpp" />
+    <ClCompile Include="Common\EffectFactory.cpp" />
+    <ClCompile Include="Common\EffectManager.cpp" />
+    <ClCompile Include="Common\EventMgr.cpp" />
+    <ClCompile Include="Common\Fish.cpp" />
+    <ClCompile Include="Common\GameConfig.cpp" />
+    <ClCompile Include="Common\IDGenerator.cpp" />
+    <ClCompile Include="Common\MathAide.cpp" />
+    <ClCompile Include="Common\MoveCompent.cpp" />
+    <ClCompile Include="Common\MovePoint.cpp" />
+    <ClCompile Include="Common\MyComponent.cpp" />
+    <ClCompile Include="Common\MyComponentFactory.cpp" />
+    <ClCompile Include="Common\MyObject.cpp" />
+    <ClCompile Include="Common\MyObjectFactory.cpp" />
+    <ClCompile Include="Common\MyObjectManager.cpp" />
+    <ClCompile Include="Common\PathManager.cpp" />
+    <ClCompile Include="Common\Player.cpp" />
+    <ClCompile Include="Common\pugixml.cpp" />
+    <ClCompile Include="Common\VisualCompent.cpp" />
+    <ClCompile Include="Server.cpp" />
+    <ClCompile Include="TableFrameSink.cpp" />
+    <ClCompile Include="TableManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\pb_server\config_define.pb.h" />
+    <ClInclude Include="..\ServerCommon\GameLog.h" />
+    <ClInclude Include="..\ServerCommon\GameTimeManager.h" />
+    <ClInclude Include="common.h" />
+    <ClInclude Include="CommonFun.h" />
+    <ClInclude Include="Common\BezierCurve.h" />
+    <ClInclude Include="Common\Buffer.h" />
+    <ClInclude Include="Common\BufferFactory.h" />
+    <ClInclude Include="Common\BufferManager.h" />
+    <ClInclude Include="Common\Bullet.h" />
+    <ClInclude Include="Common\CallBack.h" />
+    <ClInclude Include="Common\CommonLogic.h" />
+    <ClInclude Include="Common\Effect.h" />
+    <ClInclude Include="Common\EffectFactory.h" />
+    <ClInclude Include="Common\EffectManager.h" />
+    <ClInclude Include="Common\Event.h" />
+    <ClInclude Include="Common\EventMgr.h" />
+    <ClInclude Include="Common\Factory.h" />
+    <ClInclude Include="Common\Fish.h" />
+    <ClInclude Include="Common\GameConfig.h" />
+    <ClInclude Include="Common\IDGenerator.h" />
+    <ClInclude Include="Common\MathAide.h" />
+    <ClInclude Include="Common\MoveCompent.h" />
+    <ClInclude Include="Common\MovePoint.h" />
+    <ClInclude Include="Common\MyComponent.h" />
+    <ClInclude Include="Common\MyComponentFactory.h" />
+    <ClInclude Include="Common\MyFunctor.h" />
+    <ClInclude Include="Common\MyObject.h" />
+    <ClInclude Include="Common\MyObjectFactory.h" />
+    <ClInclude Include="Common\MyObjectManager.h" />
+    <ClInclude Include="Common\PathManager.h" />
+    <ClInclude Include="Common\Player.h" />
+    <ClInclude Include="Common\Point.h" />
+    <ClInclude Include="Common\pugiconfig.hpp" />
+    <ClInclude Include="Common\pugixml.hpp" />
+    <ClInclude Include="Common\Size.h" />
+    <ClInclude Include="Common\TSingleton.h" />
+    <ClInclude Include="Common\VisualCompent.h" />
+    <ClInclude Include="Common\XMLDecrypt.h" />
+    <ClInclude Include="TableFrameSink.h" />
+    <ClInclude Include="TableManager.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

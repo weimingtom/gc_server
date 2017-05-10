@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="cfg" displayName="cfg" projectFiles="true">
+      <itemPath>cfg/GateServerConfig.pb.cc</itemPath>
+      <itemPath>cfg/GateServerConfig.pb.h</itemPath>
+      <itemPath>cfg/GateServerConfig.proto</itemPath>
+    </logicalFolder>
+    <logicalFolder name="HeaderFiles" displayName="头文件" projectFiles="true">
+      <itemPath>GateClientSession.h</itemPath>
+      <itemPath>GateDBManager.h</itemPath>
+      <itemPath>GateGameSession.h</itemPath>
+      <itemPath>GateLoginSession.h</itemPath>
+      <itemPath>GateServer.h</itemPath>
+      <itemPath>GateServerConfigManager.h</itemPath>
+      <itemPath>GateSessionManager.h</itemPath>
+      <itemPath>stdafx.h</itemPath>
+      <itemPath>targetver.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles" displayName="源文件" projectFiles="true">
+      <itemPath>GateClientSession.cpp</itemPath>
+      <itemPath>GateDBManager.cpp</itemPath>
+      <itemPath>GateGameSession.cpp</itemPath>
+      <itemPath>GateLoginSession.cpp</itemPath>
+      <itemPath>GateServer.cpp</itemPath>
+      <itemPath>GateServerConfigManager.cpp</itemPath>
+      <itemPath>GateSessionManager.cpp</itemPath>
+      <itemPath>stdafx.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles" displayName="资源文件" projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="测试文件"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="重要文件"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>cfg</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+        <prependToolCollectionPath>false</prependToolCollectionPath>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <standard>8</standard>
+          <commandlineTool>g++</commandlineTool>
+          <incDir>
+            <pElem>/usr/include/mysql</pElem>
+            <pElem>../../../3rdParty/redis-3.2.8/deps/hiredis</pElem>
+            <pElem>../../../3rdParty/pbc-cloudwu</pElem>
+            <pElem>../../../3rdParty/pbc-cloudwu/src</pElem>
+            <pElem>../../../3rdParty/rapidjson-1.1.0/include</pElem>
+            <pElem>../../../common/pb</pElem>
+            <pElem>../ServerCommon</pElem>
+            <pElem>cfg</pElem>
+            <pElem>../../../3rdParty/mysql-connector-c++-1.1.7</pElem>
+            <pElem>../../../3rdParty/mysql-connector-c++-1.1.7/driver/</pElem>
+            <pElem>../../../3rdParty/mysql-connector-c++-1.1.7/build/</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>PLATFORM_LINUX</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <output>${CND_DISTDIR}/../../../project/Debug/gateserver</output>
+          <linkerAddLib>
+            <pElem>/root/redis/deps/hiredis/</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../../common/pb"
+                            CT="3"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../../../common/pb"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/../../../server/lib/libpb.a">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../ServerCommon"
+                            CT="3"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../ServerCommon"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/../../../lib/libservercommon.a">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibFileItem>/lib64/mysql/libmysqlclient.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib64/libmysqlcppconn.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/libprotobuf.a</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/liblua.a</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/libboost_system.a</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/libboost_thread.a</linkerLibFileItem>
+          </linkerLibItems>
+          <commandLine>-lhiredis</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="GateClientSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GateClientSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GateDBManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GateDBManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GateGameSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GateGameSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GateLoginSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GateLoginSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GateServer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GateServer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GateServerConfigManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GateServerConfigManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GateSessionManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GateSessionManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cfg/GateServerConfig.pb.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cfg/GateServerConfig.pb.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cfg/GateServerConfig.proto" ex="false" tool="3" flavor2="0">
+      </item>
+      <folder path="cfg">
+        <ccTool>
+          <commandLine>-I/usr/local/protobuf/include/</commandLine>
+        </ccTool>
+      </folder>
+      <item path="stdafx.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="stdafx.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="targetver.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <standard>8</standard>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="GateClientSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GateClientSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GateDBManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GateDBManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GateGameSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GateGameSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GateLoginSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GateLoginSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GateServer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GateServer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GateServerConfigManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GateServerConfigManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GateSessionManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GateSessionManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cfg/GateServerConfig.pb.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cfg/GateServerConfig.pb.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cfg/GateServerConfig.proto" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="stdafx.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="stdafx.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="targetver.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

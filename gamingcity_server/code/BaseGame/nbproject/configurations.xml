@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="cfg" displayName="cfg" projectFiles="true">
+      <itemPath>cfg/GameServerConfig.pb.cc</itemPath>
+      <itemPath>cfg/GameServerConfig.pb.h</itemPath>
+      <itemPath>cfg/GameServerConfig.proto</itemPath>
+    </logicalFolder>
+    <logicalFolder name="HeaderFiles" displayName="头文件" projectFiles="true">
+      <itemPath>BaseGameLuaScriptManager.h</itemPath>
+      <itemPath>BaseGameServer.h</itemPath>
+      <itemPath>GameDBManager.h</itemPath>
+      <itemPath>GameDBSession.h</itemPath>
+      <itemPath>GameGmManager.h</itemPath>
+      <itemPath>GameLoginSession.h</itemPath>
+      <itemPath>GameServerConfigManager.h</itemPath>
+      <itemPath>GameSession.h</itemPath>
+      <itemPath>GameSessionManager.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles" displayName="源文件" projectFiles="true">
+      <itemPath>BaseGameLuaScriptManager.cpp</itemPath>
+      <itemPath>BaseGameServer.cpp</itemPath>
+      <itemPath>BindBaseGameNetMessage.cpp</itemPath>
+      <itemPath>GameDBManager.cpp</itemPath>
+      <itemPath>GameDBSession.cpp</itemPath>
+      <itemPath>GameGmManager.cpp</itemPath>
+      <itemPath>GameLoginSession.cpp</itemPath>
+      <itemPath>GameServerConfigManager.cpp</itemPath>
+      <itemPath>GameSession.cpp</itemPath>
+      <itemPath>GameSessionManager.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles" displayName="资源文件" projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="测试文件"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="重要文件"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>cfg</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="3">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <standard>8</standard>
+          <incDir>
+            <pElem>/usr/include/mysql</pElem>
+            <pElem>../../../3rdParty/pbc-cloudwu</pElem>
+            <pElem>../../../3rdParty/pbc-cloudwu/src</pElem>
+            <pElem>../../../common/pb</pElem>
+            <pElem>../ServerCommon</pElem>
+            <pElem>cfg</pElem>
+            <pElem>/root/redis/deps/hiredis/</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>PLATFORM_LINUX</Elem>
+          </preprocessorList>
+        </ccTool>
+        <archiverTool>
+          <output>${CND_DISTDIR}/../../../lib/libbasegame.a</output>
+        </archiverTool>
+      </compileType>
+      <item path="BaseGameLuaScriptManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BaseGameLuaScriptManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BaseGameServer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BaseGameServer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BindBaseGameNetMessage.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GameDBManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GameDBManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GameDBSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GameDBSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GameGmManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GameGmManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GameLoginSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GameLoginSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GameServerConfigManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GameServerConfigManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GameSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GameSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GameSessionManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GameSessionManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cfg/GameServerConfig.pb.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cfg/GameServerConfig.pb.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cfg/GameServerConfig.proto" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="3">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <archiverTool>
+        </archiverTool>
+      </compileType>
+      <item path="BaseGameLuaScriptManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BaseGameLuaScriptManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BaseGameServer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BaseGameServer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BindBaseGameNetMessage.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GameDBManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GameDBManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GameDBSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GameDBSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GameGmManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GameGmManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GameLoginSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GameLoginSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GameServerConfigManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GameServerConfigManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GameSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GameSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GameSessionManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GameSessionManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cfg/GameServerConfig.pb.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cfg/GameServerConfig.pb.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cfg/GameServerConfig.proto" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

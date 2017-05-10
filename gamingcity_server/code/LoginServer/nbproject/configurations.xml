@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="cfg" displayName="cfg" projectFiles="true">
+      <itemPath>cfg/LoginServerConfig.pb.cc</itemPath>
+      <itemPath>cfg/LoginServerConfig.pb.h</itemPath>
+      <itemPath>cfg/LoginServerConfig.proto</itemPath>
+    </logicalFolder>
+    <logicalFolder name="HeaderFiles" displayName="头文件" projectFiles="true">
+      <itemPath>LoginDBSession.h</itemPath>
+      <itemPath>LoginServer.h</itemPath>
+      <itemPath>LoginServerConfigManager.h</itemPath>
+      <itemPath>LoginSession.h</itemPath>
+      <itemPath>LoginSessionManager.h</itemPath>
+      <itemPath>LoginSmsSession.h</itemPath>
+      <itemPath>WebGmManager.h</itemPath>
+      <itemPath>stdafx.h</itemPath>
+      <itemPath>targetver.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles" displayName="源文件" projectFiles="true">
+      <itemPath>LoginDBSession.cpp</itemPath>
+      <itemPath>LoginServer.cpp</itemPath>
+      <itemPath>LoginServerConfigManager.cpp</itemPath>
+      <itemPath>LoginSession.cpp</itemPath>
+      <itemPath>LoginSessionManager.cpp</itemPath>
+      <itemPath>LoginSmsSession.cpp</itemPath>
+      <itemPath>WebGmManager.cpp</itemPath>
+      <itemPath>stdafx.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles" displayName="资源文件" projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="测试文件"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="重要文件"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>cfg</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <standard>8</standard>
+          <incDir>
+            <pElem>/root/redis/deps/hiredis/</pElem>
+            <pElem>../../../3rdParty/pbc-cloudwu</pElem>
+            <pElem>../../../3rdParty/pbc-cloudwu/src</pElem>
+            <pElem>../../../3rdParty/rapidjson-1.1.0/include</pElem>
+            <pElem>../../../common/pb</pElem>
+            <pElem>../ServerCommon</pElem>
+            <pElem>cfg</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>PLATFORM_LINUX</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <output>${CND_DISTDIR}/../../../project/Debug/loginserver</output>
+          <linkerAddLib>
+            <pElem>/root/redis/deps/hiredis/</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../../common/pb"
+                            CT="3"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../../../common/pb"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/../../../server/lib/libpb.a">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../ServerCommon"
+                            CT="3"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../ServerCommon"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/../../../lib/libservercommon.a">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibFileItem>/usr/local/lib/libboost_system.a</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/libboost_thread.a</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/libprotobuf.a</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/liblua.a</linkerLibFileItem>
+          </linkerLibItems>
+          <commandLine>-lhiredis</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="LoginDBSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LoginDBSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LoginServer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LoginServer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LoginServerConfigManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LoginServerConfigManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LoginSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LoginSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LoginSessionManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LoginSessionManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LoginSmsSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LoginSmsSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WebGmManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="WebGmManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cfg/LoginServerConfig.pb.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cfg/LoginServerConfig.pb.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cfg/LoginServerConfig.proto" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="stdafx.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="stdafx.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="targetver.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="LoginDBSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LoginDBSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LoginServer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LoginServer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LoginServerConfigManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LoginServerConfigManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LoginSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LoginSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LoginSessionManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LoginSessionManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LoginSmsSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LoginSmsSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WebGmManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="WebGmManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cfg/LoginServerConfig.pb.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cfg/LoginServerConfig.pb.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cfg/LoginServerConfig.proto" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="stdafx.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="stdafx.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="targetver.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

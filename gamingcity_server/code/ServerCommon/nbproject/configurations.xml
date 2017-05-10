@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="cjson" displayName="cjson" projectFiles="true">
+      <itemPath>cjson/fpconv.c</itemPath>
+      <itemPath>cjson/fpconv.h</itemPath>
+      <itemPath>cjson/lua_cjson.c</itemPath>
+      <itemPath>cjson/lua_cjson.h</itemPath>
+      <itemPath>cjson/lua_extensions.c</itemPath>
+      <itemPath>cjson/lua_extensions.h</itemPath>
+      <itemPath>cjson/strbuf.c</itemPath>
+      <itemPath>cjson/strbuf.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="RSAEuro" displayName="RSAEuro" projectFiles="true">
+      <itemPath>RSAEuro/global.h</itemPath>
+      <itemPath>RSAEuro/md5.h</itemPath>
+      <itemPath>RSAEuro/md5c.cpp</itemPath>
+      <itemPath>RSAEuro/nn.cpp</itemPath>
+      <itemPath>RSAEuro/nn.h</itemPath>
+      <itemPath>RSAEuro/prime.cpp</itemPath>
+      <itemPath>RSAEuro/prime.h</itemPath>
+      <itemPath>RSAEuro/r_keygen.cpp</itemPath>
+      <itemPath>RSAEuro/r_random.cpp</itemPath>
+      <itemPath>RSAEuro/r_random.h</itemPath>
+      <itemPath>RSAEuro/r_stdlib.cpp</itemPath>
+      <itemPath>RSAEuro/rsa.cpp</itemPath>
+      <itemPath>RSAEuro/rsa.h</itemPath>
+      <itemPath>RSAEuro/rsaeuro.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="HeaderFiles" displayName="头文件" projectFiles="true">
+      <itemPath>BaseServer.h</itemPath>
+      <itemPath>CryptoManager.h</itemPath>
+      <itemPath>DBConnection.h</itemPath>
+      <itemPath>DBConnectionPool.h</itemPath>
+      <itemPath>DBQueryResult.h</itemPath>
+      <itemPath>FileMD5.h</itemPath>
+      <itemPath>GameLog.h</itemPath>
+      <itemPath>GameTimeManager.h</itemPath>
+      <itemPath>GmManager.h</itemPath>
+      <itemPath>LuaDBConnectionPool.h</itemPath>
+      <itemPath>LuaNetworkDispatcher.h</itemPath>
+      <itemPath>LuaScriptManager.h</itemPath>
+      <itemPath>NetworkConnectSession.h</itemPath>
+      <itemPath>NetworkDispatcher.h</itemPath>
+      <itemPath>NetworkIoServicePool.h</itemPath>
+      <itemPath>NetworkServer.h</itemPath>
+      <itemPath>NetworkSession.h</itemPath>
+      <itemPath>OpenSSLCryptoManager.h</itemPath>
+      <itemPath>RedisConnection.h</itemPath>
+      <itemPath>RedisConnectionThread.h</itemPath>
+      <itemPath>RedisQueryResult.h</itemPath>
+      <itemPath>Singleton.h</itemPath>
+      <itemPath>UtilsHelper.h</itemPath>
+      <itemPath>WindowsConsole.h</itemPath>
+      <itemPath>base64.h</itemPath>
+      <itemPath>lua_tinker.h</itemPath>
+      <itemPath>lua_tinker_ex.h</itemPath>
+      <itemPath>minidump.h</itemPath>
+      <itemPath>perinclude.h</itemPath>
+      <itemPath>platform_windows.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles" displayName="源文件" projectFiles="true">
+      <itemPath>BaseServer.cpp</itemPath>
+      <itemPath>BindDBConnectionPool.cpp</itemPath>
+      <itemPath>BindGameLog.cpp</itemPath>
+      <itemPath>BindGameTimer.cpp</itemPath>
+      <itemPath>BindRedis.cpp</itemPath>
+      <itemPath>DBConnection.cpp</itemPath>
+      <itemPath>DBConnectionPool.cpp</itemPath>
+      <itemPath>FileMD5.cpp</itemPath>
+      <itemPath>GameLog.cpp</itemPath>
+      <itemPath>GameTimeManager.cpp</itemPath>
+      <itemPath>GmManager.cpp</itemPath>
+      <itemPath>LuaDBConnectionPool.cpp</itemPath>
+      <itemPath>LuaScriptManager.cpp</itemPath>
+      <itemPath>NetworkConnectSession.cpp</itemPath>
+      <itemPath>NetworkDispatcher.cpp</itemPath>
+      <itemPath>NetworkIoServicePool.cpp</itemPath>
+      <itemPath>NetworkServer.cpp</itemPath>
+      <itemPath>NetworkSession.cpp</itemPath>
+      <itemPath>OpenSSLCryptoManager.cpp</itemPath>
+      <itemPath>RedisConnection.cpp</itemPath>
+      <itemPath>RedisConnectionThread.cpp</itemPath>
+      <itemPath>UtilsHelper.cpp</itemPath>
+      <itemPath>WindowsConsole.cpp</itemPath>
+      <itemPath>base64.cpp</itemPath>
+      <itemPath>lua_tinker.cpp</itemPath>
+      <itemPath>lua_tinker_ex.cpp</itemPath>
+      <itemPath>pbc-lua53.cpp</itemPath>
+      <itemPath>platform_windows.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles" displayName="资源文件" projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="测试文件"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="重要文件"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>cjson</Elem>
+    <Elem>RSAEuro</Elem>
+    <Elem>../../../3rdParty/pbc-cloudwu</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="3">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <stripSymbols>true</stripSymbols>
+          <standard>8</standard>
+          <incDir>
+            <pElem>/usr/include/mysql</pElem>
+            <pElem>../../../3rdParty/redis-3.2.8/deps/hiredis</pElem>
+            <pElem>../../../common/pb</pElem>
+            <pElem>cjson</pElem>
+            <pElem>../../../3rdParty/mysql-connector-c++-1.1.7/driver/</pElem>
+            <pElem>../../../3rdParty/mysql-connector-c++-1.1.7</pElem>
+            <pElem>../../../3rdParty/mysql-connector-c++-1.1.7/build</pElem>
+            <pElem>../../../../../redis/deps/hiredis</pElem>
+            <pElem>../../../3rdParty/pbc-cloudwu</pElem>
+          </incDir>
+          <commandLine>-I/usr/local/protobuf/include/</commandLine>
+          <preprocessorList>
+            <Elem>PLATFORM_LINUX</Elem>
+          </preprocessorList>
+        </ccTool>
+        <archiverTool>
+          <output>${CND_DISTDIR}/../../../lib/libservercommon.a</output>
+        </archiverTool>
+      </compileType>
+      <item path="BaseServer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BaseServer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BindDBConnectionPool.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BindGameLog.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BindGameTimer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BindRedis.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CryptoManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DBConnection.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DBConnection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DBConnectionPool.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DBConnectionPool.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DBQueryResult.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FileMD5.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FileMD5.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GameLog.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GameLog.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GameTimeManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GameTimeManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GmManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GmManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LuaDBConnectionPool.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LuaDBConnectionPool.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LuaNetworkDispatcher.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LuaScriptManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LuaScriptManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="NetworkConnectSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="NetworkConnectSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="NetworkDispatcher.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="NetworkDispatcher.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="NetworkIoServicePool.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="NetworkIoServicePool.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="NetworkServer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="NetworkServer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="NetworkSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="NetworkSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="OpenSSLCryptoManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="OpenSSLCryptoManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RSAEuro/global.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RSAEuro/md5.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RSAEuro/md5c.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="RSAEuro/nn.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="RSAEuro/nn.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RSAEuro/prime.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="RSAEuro/prime.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RSAEuro/r_keygen.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="RSAEuro/r_random.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="RSAEuro/r_random.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RSAEuro/r_stdlib.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="RSAEuro/rsa.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="RSAEuro/rsa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RSAEuro/rsaeuro.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RedisConnection.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="RedisConnection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RedisConnectionThread.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="RedisConnectionThread.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RedisQueryResult.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Singleton.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="UtilsHelper.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="UtilsHelper.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WindowsConsole.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="WindowsConsole.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="base64.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="base64.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cjson/fpconv.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cjson/fpconv.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cjson/lua_cjson.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cjson/lua_cjson.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cjson/lua_extensions.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cjson/lua_extensions.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cjson/strbuf.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cjson/strbuf.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lua_tinker.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lua_tinker.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lua_tinker_ex.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lua_tinker_ex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="minidump.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="pbc-lua53.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="perinclude.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="platform_windows.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="platform_windows.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="3">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <archiverTool>
+        </archiverTool>
+      </compileType>
+      <item path="BaseServer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BaseServer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BindDBConnectionPool.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BindGameLog.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BindGameTimer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BindRedis.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CryptoManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DBConnection.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DBConnection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DBConnectionPool.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DBConnectionPool.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DBQueryResult.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FileMD5.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FileMD5.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GameLog.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GameLog.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GameTimeManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GameTimeManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GmManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GmManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LuaDBConnectionPool.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LuaDBConnectionPool.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LuaNetworkDispatcher.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LuaScriptManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LuaScriptManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="NetworkConnectSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="NetworkConnectSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="NetworkDispatcher.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="NetworkDispatcher.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="NetworkIoServicePool.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="NetworkIoServicePool.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="NetworkServer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="NetworkServer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="NetworkSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="NetworkSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="OpenSSLCryptoManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="OpenSSLCryptoManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RSAEuro/global.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RSAEuro/md5.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RSAEuro/md5c.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="RSAEuro/nn.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="RSAEuro/nn.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RSAEuro/prime.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="RSAEuro/prime.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RSAEuro/r_keygen.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="RSAEuro/r_random.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="RSAEuro/r_random.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RSAEuro/r_stdlib.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="RSAEuro/rsa.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="RSAEuro/rsa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RSAEuro/rsaeuro.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RedisConnection.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="RedisConnection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RedisConnectionThread.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="RedisConnectionThread.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RedisQueryResult.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Singleton.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="UtilsHelper.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="UtilsHelper.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WindowsConsole.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="WindowsConsole.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="base64.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="base64.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cjson/fpconv.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cjson/fpconv.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cjson/lua_cjson.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cjson/lua_cjson.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cjson/lua_extensions.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cjson/lua_extensions.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cjson/strbuf.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cjson/strbuf.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lua_tinker.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lua_tinker.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lua_tinker_ex.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lua_tinker_ex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="minidump.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="pbc-lua53.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="perinclude.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="platform_windows.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="platform_windows.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

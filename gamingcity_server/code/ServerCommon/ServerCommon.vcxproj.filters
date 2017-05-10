@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="RSAEuro">
+      <UniqueIdentifier>{700899b5-88fe-4d04-b267-b5d3d321c16c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MD5">
+      <UniqueIdentifier>{a3942a0a-15f8-4246-af13-ee89b3f3fa8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lua">
+      <UniqueIdentifier>{5f7b7f11-1ee0-4b42-a438-19f9f2dc4e2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lua\cjson">
+      <UniqueIdentifier>{7d9a08dc-9779-4602-9e35-0b7d0c98c6fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mysql">
+      <UniqueIdentifier>{37290a54-6fc8-4182-b919-65edc3a9b88a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Redis">
+      <UniqueIdentifier>{23c40231-c297-41a8-9b30-43afdbfb115f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="asynTask">
+      <UniqueIdentifier>{dab810b8-efe5-46fe-897d-8e058f07f5f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameContrl">
+      <UniqueIdentifier>{a24c7547-0742-4151-9ca9-2696ccc4ea39}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NetworkServer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkSession.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkDispatcher.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="perinclude.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkIoServicePool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkConnectSession.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CryptoManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="minidump.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsConsole.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GameTimeManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RSAEuro\global.h">
+      <Filter>RSAEuro</Filter>
+    </ClInclude>
+    <ClInclude Include="RSAEuro\md5.h">
+      <Filter>RSAEuro</Filter>
+    </ClInclude>
+    <ClInclude Include="RSAEuro\nn.h">
+      <Filter>RSAEuro</Filter>
+    </ClInclude>
+    <ClInclude Include="RSAEuro\prime.h">
+      <Filter>RSAEuro</Filter>
+    </ClInclude>
+    <ClInclude Include="RSAEuro\r_random.h">
+      <Filter>RSAEuro</Filter>
+    </ClInclude>
+    <ClInclude Include="RSAEuro\rsa.h">
+      <Filter>RSAEuro</Filter>
+    </ClInclude>
+    <ClInclude Include="RSAEuro\rsaeuro.h">
+      <Filter>RSAEuro</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilsHelper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="base64.h">
+      <Filter>MD5</Filter>
+    </ClInclude>
+    <ClInclude Include="FileMD5.h">
+      <Filter>MD5</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenSSLCryptoManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="platform_windows.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="cjson\lua_cjson.h">
+      <Filter>Lua\cjson</Filter>
+    </ClInclude>
+    <ClInclude Include="cjson\lua_extensions.h">
+      <Filter>Lua\cjson</Filter>
+    </ClInclude>
+    <ClInclude Include="cjson\strbuf.h">
+      <Filter>Lua\cjson</Filter>
+    </ClInclude>
+    <ClInclude Include="cjson\fpconv.h">
+      <Filter>Lua\cjson</Filter>
+    </ClInclude>
+    <ClInclude Include="GmManager.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua_tinker.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua_tinker_ex.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaNetworkDispatcher.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaScriptManager.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="DBConnection.h">
+      <Filter>Mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="DBConnectionPool.h">
+      <Filter>Mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="DBQueryResult.h">
+      <Filter>Mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaDBConnectionPool.h">
+      <Filter>Mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="RedisConnection.h">
+      <Filter>Redis</Filter>
+    </ClInclude>
+    <ClInclude Include="RedisConnectionThread.h">
+      <Filter>Redis</Filter>
+    </ClInclude>
+    <ClInclude Include="RedisQueryResult.h">
+      <Filter>Redis</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseServer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="asynTask\AsynTaskMgr.h">
+      <Filter>asynTask</Filter>
+    </ClInclude>
+    <ClInclude Include="asynTask\HttpRequest.h">
+      <Filter>asynTask</Filter>
+    </ClInclude>
+    <ClInclude Include="GameContrl.h">
+      <Filter>GameContrl</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomHelper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="NetworkServer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkSession.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkDispatcher.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkIoServicePool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseServer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkConnectSession.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsConsole.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GameTimeManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RSAEuro\md5c.cpp">
+      <Filter>RSAEuro</Filter>
+    </ClCompile>
+    <ClCompile Include="RSAEuro\nn.cpp">
+      <Filter>RSAEuro</Filter>
+    </ClCompile>
+    <ClCompile Include="RSAEuro\prime.cpp">
+      <Filter>RSAEuro</Filter>
+    </ClCompile>
+    <ClCompile Include="RSAEuro\r_keygen.cpp">
+      <Filter>RSAEuro</Filter>
+    </ClCompile>
+    <ClCompile Include="RSAEuro\r_random.cpp">
+      <Filter>RSAEuro</Filter>
+    </ClCompile>
+    <ClCompile Include="RSAEuro\r_stdlib.cpp">
+      <Filter>RSAEuro</Filter>
+    </ClCompile>
+    <ClCompile Include="RSAEuro\rsa.cpp">
+      <Filter>RSAEuro</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilsHelper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="base64.cpp">
+      <Filter>MD5</Filter>
+    </ClCompile>
+    <ClCompile Include="FileMD5.cpp">
+      <Filter>MD5</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenSSLCryptoManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="platform_windows.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cjson\lua_cjson.c">
+      <Filter>Lua\cjson</Filter>
+    </ClCompile>
+    <ClCompile Include="cjson\lua_extensions.c">
+      <Filter>Lua\cjson</Filter>
+    </ClCompile>
+    <ClCompile Include="cjson\strbuf.c">
+      <Filter>Lua\cjson</Filter>
+    </ClCompile>
+    <ClCompile Include="cjson\fpconv.c">
+      <Filter>Lua\cjson</Filter>
+    </ClCompile>
+    <ClCompile Include="BindGameTimer.cpp">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="GmManager.cpp">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_tinker.cpp">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_tinker_ex.cpp">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaScriptManager.cpp">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="BindGameLog.cpp">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="pbc-lua53.cpp">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="BindDBConnectionPool.cpp">
+      <Filter>Mysql</Filter>
+    </ClCompile>
+    <ClCompile Include="DBConnection.cpp">
+      <Filter>Mysql</Filter>
+    </ClCompile>
+    <ClCompile Include="DBConnectionPool.cpp">
+      <Filter>Mysql</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaDBConnectionPool.cpp">
+      <Filter>Mysql</Filter>
+    </ClCompile>
+    <ClCompile Include="RedisConnection.cpp">
+      <Filter>Redis</Filter>
+    </ClCompile>
+    <ClCompile Include="RedisConnectionThread.cpp">
+      <Filter>Redis</Filter>
+    </ClCompile>
+    <ClCompile Include="BindRedis.cpp">
+      <Filter>Redis</Filter>
+    </ClCompile>
+    <ClCompile Include="asynTask\AsynTaskMgr.cpp">
+      <Filter>asynTask</Filter>
+    </ClCompile>
+    <ClCompile Include="asynTask\HttpRequest.cpp">
+      <Filter>asynTask</Filter>
+    </ClCompile>
+    <ClCompile Include="GameContrl.cpp">
+      <Filter>GameContrl</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
